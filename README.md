@@ -5,7 +5,9 @@ A project to sync kubernetes secrets to an s3 bucket (and vise-versa)
 This project can be deployed to a Kubenretes cluster via Helm using the following
 
 ```
-helm install <Release-Name> --set args[0]="--s3-bucket-name=<bucket-name>"
+helm repo add sarmad-helm-charts https://sarmad-abualkaz.github.io/my-helm-charts/
+
+helm install <Release-Name> sarmad-helm-charts/k8s-s3-sync --set args='{"--s3-bucket-name=<Bucket-Name>","--aws-profile=<AWS-Profile>","--aws-region=<AWS-Region>"}'
 ```
 
 ## How it works 
