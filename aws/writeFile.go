@@ -12,16 +12,6 @@ import (
 
 
 func WriteFile(sess *session.Session, bucket string, profile string, region string, body []byte, key string) error {
-
-	// // Set AWS session
-	// sess, err := SetupSession(profile, region)
-
-	// // Check for errors from AWS session setup
-	// if err != nil {
-	// 	return err
-	// }
-	
-	// Successful AWS session setup
 	
 	// pass session to s3-clinet
 	s3Client := s3.New(sess)

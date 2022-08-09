@@ -10,21 +10,12 @@ import (
 // Find all files in bucket
 func ListFiles(sess *session.Session, bucket string) (map[string]string, error) {
 	
-	// Declare empty object map
-	objectMap := make(map[string]string)
-
-	// // // Set AWS session
-	// sess, err := SetupSession(profile, region)
-
-	// // Check for errors from AWS session setup
-	// if err != nil {
-	// 	return objectMap, err
-	// }
-	
-	// Successful AWS session setup
-	
 	// pass session to s3-clinet
 	s3Client := s3.New(sess)
+	
+	// Declare empty object map
+	objectMap := make(map[string]string)
+	
 	
 	//setup a ListObjectsInput
 	input := &s3.ListObjectsInput{

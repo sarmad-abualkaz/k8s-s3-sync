@@ -11,16 +11,6 @@ import (
 )
 
 func ReadFile(sess *session.Session, bucket string, profile string, region string, key string) ([]byte, error) {
-
-	// // Set AWS Session
-	// sess, err := SetupSession(profile, region)
-
-	// // Check for errors from AWS session setup
-	// if err != nil {
-	// 	return nil, err
-	// }
-	
-	// Successful AWS session setup
 	
 	// pass session to s3-clinet
 	s3Client := s3.New(sess)
